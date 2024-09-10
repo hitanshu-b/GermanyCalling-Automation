@@ -12,18 +12,16 @@ public class PropertyReader {
 
         FileInputStream file = null;
         Properties props = null;
-        try{
-            file = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/data.properties");
+        try {
+            file = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/data.properties");
             props = new Properties();
             props.load(file);
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }
-        finally {
-            try{
+        } finally {
+            try {
                 file.close();
-            } catch(Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

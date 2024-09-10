@@ -9,13 +9,13 @@ public class CommonTests {
 
     @BeforeMethod
     @Description("Open the Browser")
-    public void openBrowser(){
+    public void openBrowser() {
         Manager.init();
     }
 
     @AfterMethod
     @Description("Close the Browser")
-    public void closeBrowser(){
+    public void closeBrowser() {
         Manager.down();
     }
 }

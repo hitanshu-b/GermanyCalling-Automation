@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="4">
+    <test verbose="2" preserve-order="true" name="Germany Calling Automation">
+        <classes>
+            <class name="org.example.Tests.TestLogin">
+                <methods>
+                    <include name="validLogin"/>
+                    <include name="invalidLogin"/>
+                    <include name="invalidLogin1"/>
+                    <include name="invalidLogin2"/>
+                    <include name="invalidLogin3"/>
+                    <include name="invalidLogin4"/>
+                    <include name="invalidLogin5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

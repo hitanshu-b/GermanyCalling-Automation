@@ -13,7 +13,7 @@ public class TestLogin extends CommonTests {
 
     @Test
     @Description("TC001 - Positive Test Case for Login")
-    public void validLogin(){
+    public void validLogin() {
         login.openURL();
         login.loginAction_positive();
         HomePage homePage = login.afterSuccessfulLogin();
@@ -23,7 +23,7 @@ public class TestLogin extends CommonTests {
 
     @Test
     @Description("TC002 - User Not Registered")
-    public void invalidLogin(){
+    public void invalidLogin() {
         login.openURL();
         String errorMessage = login.loginAction_negative6();
         Assert.assertEquals(errorMessage, PropertyReader.readKey("error_message"));
@@ -31,42 +31,42 @@ public class TestLogin extends CommonTests {
 
     @Test
     @Description("TC003 - Invalid Useremail and Valid Password")
-    public void invalidLogin1(){
+    public void invalidLogin1() {
         login.openURL();
         String errorMessage = login.loginAction_negative1();
-        Assert.assertEquals(errorMessage,PropertyReader.readKey("error_message"));
+        Assert.assertEquals(errorMessage, PropertyReader.readKey("error_message"));
     }
 
     @Test
     @Description("TC004 - Valid Useremail and Invalid Password")
-    public void invalidLogin2(){
+    public void invalidLogin2() {
         login.openURL();
         String errorMessage = login.loginAction_negative2();
-        Assert.assertEquals(errorMessage,PropertyReader.readKey("error_message"));
+        Assert.assertEquals(errorMessage, PropertyReader.readKey("error_message"));
     }
 
     @Test
     @Description("TC005 - Blank Useremail and Password")
-    public void invalidLogin3(){
+    public void invalidLogin3() {
         login.openURL();
         String errorMessage = login.loginAction_negative3();
-        Assert.assertEquals(errorMessage,PropertyReader.readKey("error_message1"));
+        Assert.assertEquals(errorMessage, PropertyReader.readKey("error_message1"));
     }
 
     @Test
     @Description("TC005 - Blank Useremail and Valid Password")
-    public void invalidLogin4(){
+    public void invalidLogin4() {
         login.openURL();
         String errorMessage = login.loginAction_negative4();
-        Assert.assertEquals(errorMessage,PropertyReader.readKey("error_message2"));
+        Assert.assertEquals(errorMessage, PropertyReader.readKey("error_message2"));
     }
 
     @Test
     @Description("TC003 - Valid Useremail and Blank Password")
-    public void invalidLogin5(){
+    public void invalidLogin5() {
         login.openURL();
         String errorMessage = login.loginAction_negative5();
-        Assert.assertEquals(errorMessage,PropertyReader.readKey("error_message3"));
+        Assert.assertEquals(errorMessage, PropertyReader.readKey("error_message3"));
     }
 
 }

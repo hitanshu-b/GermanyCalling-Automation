@@ -9,9 +9,8 @@ public class HomePage extends CommonFunctions {
 
     By userName = By.xpath("//a[@id='dropdownUser1']");
 
-    public String loggedInUser(){
+    public String loggedInUser() {
         presenceOfElement(userName);
         return getElementText(userName);
     }
-
 }
